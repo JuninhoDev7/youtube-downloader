@@ -16,7 +16,7 @@ app.get("/home", (req, res) => {
 })
 
 app.get("/", (req, res) => {
-    res.redirect("/")
+    res.redirect("/home")
 })
 
 app.listen(port, () => {
