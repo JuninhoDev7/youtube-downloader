@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuberDownloader</title>
+    <style>
+        .all{
+            margin-top: 5%;
+            align-items: center;
+            text-align: center;
+        }
+        .all input{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+        .all button{
+            border-radius: 4px;
+            background-color: rgb(158, 158, 158);
+        }
+        .all button:hover{
+            background-color: rgb(117, 117, 117);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="all">
+            <h1>Faça Download de videos do youtube.</h1>
+            <input placeholder="insira a url do video" id="url"><br>
+            <button onclick="downloader()">Fazer Download</button>
+        </section>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    function downloader(){
+        const url = document.getElementById("url").value
+        console.log(url)
+
+        window.open(`/download/?url=${url}`, "_blank");
+    }
+</script>
+</html>
